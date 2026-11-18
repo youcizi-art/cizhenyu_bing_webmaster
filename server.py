@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Bing Webmaster Tools MCP（零依赖 stdio JSON-RPC）。
 
-API Key 由词真语 Deploy 注入：
+API Key 由磁帧鱼 Deploy 注入：
   - 进程环境 BING_WEBMASTER_API_KEY
   - 或 CIZHENYU_AUTH_DIR/bing.json 的 apiKey
 禁止在代码或仓库中写入密钥。

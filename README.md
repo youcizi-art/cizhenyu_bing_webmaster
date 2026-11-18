@@ -1,6 +1,6 @@
 # cizhenyu_bing_webmaster
 
-Bing Webmaster Tools MCP for 词真语 Deploy.
+Bing Webmaster Tools MCP for 磁帧鱼 Deploy.
 
 ## Secrets
 
