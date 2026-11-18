@@ -1,0 +1,50 @@
+{
+  "protocolVersion": 1,
+  "id": "bing-webmaster",
+  "name": "Bing Webmaster Tools",
+  "category": "seo",
+  "tier": "optional",
+  "description": "Bing 站点、URL 提交与抓取统计",
+  "source": {
+    "github": "https://github.com/youcizi-art/cizhenyu_bing_webmaster",
+    "defaultRef": "master"
+  },
+  "install": {
+    "runtime": "python",
+    "steps": [],
+    "readyCheck": ["server.py"]
+  },
+  "credentials": {
+    "key": "bing",
+    "fields": [
+      {
+        "type": "password",
+        "name": "apiKey",
+        "label": "API Key",
+        "required": true,
+        "tip": "Bing Webmaster → 设置 → API 访问",
+        "link": {
+          "label": "Bing Webmaster Tools",
+          "url": "https://www.bing.com/webmasters"
+        }
+      }
+    ],
+    "sidecar": "bing.json"
+  },
+  "env": [
+    { "name": "BING_WEBMASTER_API_KEY", "fromCredential": "apiKey" },
+    { "name": "CIZHENYU_AUTH_DIR", "from": "credentialsDir" }
+  ],
+  "mcp": {
+    "transport": "stdio",
+    "command": "python",
+    "args": ["server.py"],
+    "cwd": "."
+  },
+  "guides": { "setup": "guides/setup.md" },
+  "health": {
+    "requireCredentials": true,
+    "requireReadyFiles": ["server.py"]
+  },
+  "actions": []
+}
